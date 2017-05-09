@@ -1,0 +1,15 @@
+<div *ngIf="auth.authenticated()">
+    <div class="service-list" *ngFor="let character of characters">
+        <div>
+            <h3>{{character.name}}</h3>
+            <div>
+                <a routerLink="/character/{{character.id}}"><img [src]="character.thumbnail.path+'.'+character.thumbnail.extension" alt="icon" class="alignnone size-full wp-image-156"
+                    /></a>
+                <p>{{character.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<h4 *ngIf="!auth.authenticated()">You are not logged in, please click 'Log in' button to login</h4>

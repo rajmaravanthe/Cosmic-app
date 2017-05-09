@@ -1,0 +1,19 @@
+<div class="character">
+    <h3>{{comic.name}}</h3>
+    <div>
+        <img [src]="comic.thumbnail.path+'.'+comic.thumbnail.extension" alt="icon" class="alignnone size-full wp-image-156"
+        />
+        <p>{{comic.description}}</p>
+    </div>
+    <div class="characterComics">
+        <button class="btn btn-primary btn-margin" routerLink="/comics/{{comic.id}}/creators">Creators</button>
+    </div>
+    <div>
+        <h4>Series</h4>
+        <ul>
+            <li >
+                {{comic.series.name}}
+            </li>
+        </ul>
+    </div>
+</div>

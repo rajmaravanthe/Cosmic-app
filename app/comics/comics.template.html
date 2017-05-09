@@ -1,0 +1,14 @@
+
+    <div class="service-list" *ngFor="let comic of comics">
+        <div>
+            <h3>{{comic.name}}</h3>
+            <div>
+                <a routerLink="/comics/{{comic.id}}"><img [src]="comic.thumbnail.path+'.'+comic.thumbnail.extension" alt="icon" class="alignnone size-full wp-image-156"
+                    /></a>
+                <p>{{comic.description}}</p>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="comics.length == 0"> 
+        No Comics for this character
+    </div>

@@ -1,0 +1,17 @@
+<div class="service-list" *ngFor="let creator of creators">
+    <div>
+        <h3>{{creator.fullName}}</h3>
+        <div>
+            <a><img [src]="creator.thumbnail.path+'.'+creator.thumbnail.extension" alt="icon" class="alignnone size-full wp-image-156"
+                /></a>
+            <ul>
+                <li *ngFor="let series of creator.events.items">
+                    {{series.name}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div *ngIf="creators.length == 0">
+    No Creator for this Comic
+</div>

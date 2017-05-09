@@ -1,0 +1,19 @@
+<div class="character">
+    <h3>{{character.name}}</h3>
+    <div>
+        <img [src]="character.thumbnail.path+'.'+character.thumbnail.extension" alt="icon" class="alignnone size-full wp-image-156"
+        />
+        <p>{{character.description}}</p>
+    </div>
+    <div class="characterComics">
+        <button class="btn btn-primary btn-margin" routerLink="/character/{{character.id}}/comics">Comics</button>
+    </div>
+    <div>
+        <h4>Series</h4>
+        <ul>
+            <li *ngFor="let series of character.series.items">
+                {{series.name}}
+            </li>
+        </ul>
+    </div>
+</div>
